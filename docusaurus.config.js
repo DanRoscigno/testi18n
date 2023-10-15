@@ -32,7 +32,15 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-US',
+      },
+      zh: {
+        htmlLang: 'zh-CN',
+      },
+    },
   },
 
   presets: [
@@ -41,6 +49,21 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: '3.1',
+          onlyIncludeVersions: ['3.1', '3.0', '2.5'],
+          versions: {
+            '3.1': {
+              label: 'latest-3.1'
+            },
+            '3.0': {
+              label: '3.0',
+              banner: 'none'
+            },
+            '2.5': {
+              label: '2.5',
+              banner: 'none'
+            },
+          },
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -71,6 +94,16 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
+            dropdownActiveClassDisabled: true,
+
           },
           {
             href: 'https://github.com/facebook/docusaurus',
