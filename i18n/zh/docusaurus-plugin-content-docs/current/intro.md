@@ -1,3 +1,15 @@
+---
+displayed_sidebar: "Chinese"
+---
+
+---
+displayed_sidebar: "Chinese"
+---
+
+---
+displayed_sidebar: "Chinese31"
+---
+
 # 在 AWS 上使用 AWS CloudFormation 部署 StarRocks 集群
 
 StarRocks 支持与 AWS CloudFormation 集成，您可以在 AWS 上使用 AWS CloudFormation 快速部署并使用 StarRocks 集群。

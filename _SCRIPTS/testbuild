@@ -60,8 +60,8 @@ find versioned_docs -type d -name quick_start -print0 -exec cp _SCRIPTS/index_pa
 find i18n/zh/docusaurus-plugin-content-docs -type d -name quick_start -print0 -exec cp _SCRIPTS/index_pages/Chinese/quick_start.mdx "{}" \;
 
 # echo "adding frontmatter for sidebar language"
-# _SCRIPTS/add_chinese_sidebar.sh
-# _SCRIPTS/add_english_sidebar.sh
+_SCRIPTS/add_chinese_sidebar.sh
+_SCRIPTS/add_english_sidebar.sh
 
 echo "verifying Markdown"
 npx docusaurus-mdx-checker -c versioned_docs
